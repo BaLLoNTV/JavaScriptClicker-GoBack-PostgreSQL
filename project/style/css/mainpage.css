@@ -1,0 +1,87 @@
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  overflow: auto;
+  background-color: #111;
+}
+#maincontainer {
+  white-space: nowrap;
+  margin: 1% 1%;
+  width: 98%;
+
+  text-align: left;
+  overflow: visible;
+  background-color: #111;
+  border: none;
+}
+#mainmenucontainer
+{
+width: 100%;
+height: 14%;
+overflow: hidden;
+background-color: #4CAF50;
+border: none;
+}
+#rulecontainers
+{
+width: 100%;
+height: 86%;
+border: 1px solid #6e6e6e;
+background-color: #6e6e6e
+}
+#rulecontainers p {
+white-space: normal;
+text-align: left;
+
+}
+.mainmenu {
+text-align: center;
+border: none;
+margin: 0px -2px;
+padding: 0px 0px;
+width: 130px;
+height: 70px;
+white-space: nowrap;
+font-size:30px;
+cursor:pointer;
+background-color: #4CAF50;
+outline: none;
+color: white;
+}
+#mainmenucontainer button.active{
+background-color: #6e6e6e;
+box-shadow: inset 3px 3px 2px 0px rgba(66,66,66,1);
+}
+#mainmenumenu {
+background-color: #111;
+}
+
+.rulecontainer {
+y-overflow: auto;
+text-align: center;
+display: none;
+font-size: 30px;
+color: white;
+}
+.rulecontainer label{
+text-align: center;
+white-space: normal;
+font-size: 42px;
+}
+.containerforsettings {
+text-align: left;
+white-space: normal;
+}
+.rulecontainer input[type=text] {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 22px;
+}
+.rulecontainer input[type=range] {
+  width: 240px;
+}
+.rulecontainer span {
+display: inline-block;
+width: 380px;
+}

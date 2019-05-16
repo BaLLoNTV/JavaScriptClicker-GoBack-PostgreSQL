@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>My clicker</title>
+</head>
+<link type="text/css" rel="stylesheet" href="/css/mainpage.css">
+<link type="text/css" rel="stylesheet" href="/css/mainmenu.css">
+<script type="text/javascript" src="/js/mainpage.js"></script>
+<script type="text/javascript" src="/js/mainmenu.js"></script>
+
+
+<body>
+<div id="main">
+<div id="maincontainer">
+<div id="mainmenucontainer">
+  <button id="mainmenumenu" class="mainmenu"  onclick="openNav()"> Menu</button>
+  <button class="mainmenu"  onclick="GetRules(event,'Game1')">Game 1</button>
+  <button class="mainmenu"  onclick="GetRules(event,'Game2')">Game 2</button>
+  <button class="mainmenu"  onclick="GetRules(event,'Game3')">Game 3</button>
+</div>
+<div id="rulecontainers">
+<div id="Game1" class="rulecontainer">
+<label>Rules of the game one.</label>
+<p>При наведение курсора на мишень и клика мышкой, после попадания мишень меняет своё местоположение. Радиус мишени указывается с помошью "Radius". Для того чтобы начать игру нужно попасть по мишени расположенной в поле игры под надписью "Start!".</p>
+<div id="game1radius" class="containerforsettings"><span>Radius</span><input id="game1radiusrange" type="range" min="1" max="50" value="10" oninput="chargerangetextequality('game1radiusrange','game1radiustext')" ><input id="game1radiustext" type="text" value="10" disabled></div>
+<a href="#" id="myUniqueLinkId1" class="mainmenu"  onclick="HrefCreation(1)">Start</a>
+</div>
+<div id="Game2" class="rulecontainer">
+<label>Rules of the game two.</label>
+<p>При наведение курсора на мишень и клика мышкой, мишень пропадает. Радиус мишени указывается с помошью "Radius". Мишени появляются с промежутком времени "Respawn time of target ms" в миллисекундах. Максимальное количество мишений указывается с помошью "Number of targets". Для того чтобы начать игру нужно попасть по мишени расположенной в поле игры под надписью "Start!".</p>
+<div id="game2radius" class="containerforsettings"><span>Radius</span><input id="game2radiusrange" type="range" min="1" max="50" value="10" oninput="chargerangetextequality('game2radiusrange','game2radiustext')" ><input id="game2radiustext" type="text" value="10" disabled></div>
+<div id="game2numberoftargets" class="containerforsettings"><span>Number of targets</span><input id="game2numberoftargetsrange" type="range" min="1" max="50" value="10" oninput="chargerangetextequality('game2numberoftargetsrange','game2numberoftargetstext')" ><input id="game2numberoftargetstext" type="text" value="10" disabled></div>
+<div id="game2time" class="containerforsettings"><span>Respawn time of target ms</span><input id="game2timerange" type="range" min="100" max="2000" value="500" oninput="chargerangetextequality('game2timerange','game2timetext')" ><input id="game2timetext" type="text" value="500" disabled></div>
+<a href="#" id="myUniqueLinkId2" class="mainmenu"  onclick="HrefCreation(2)">Start</a>
+</div>
+<div id="Game3" class="rulecontainer">
+<label>Rules of the game three.</label>
+<p>Мишень меняет цвет с синего на красный, после этого она становится доступной для взаимодействия. Если кликнуть по мишени, когда она активна, то будет выведено время в в миллисекундах между сменой цвета мишени и вашим кликом. Для того чтобы начать игру нужно попасть по мишени расположенной в поле игры под надписью "Start!".</p>
+<div id="game3radius" class="containerforsettings"><span>Radius</span><input id="game3radiusrange" type="range" min="1" max="100" value="10" oninput="chargerangetextequality('game3radiusrange','game3radiustext')" ><input id="game3radiustext" type="text" value="10" disabled></div>
+<div id="game3time" class="containerforsettings"><span>Indication time</span><input id="game3timerange" type="range" min="100" max="2000" value="500" oninput="chargerangetextequality('game3timerange','game3timetext')" ><input id="game3timetext" type="text" value="500" disabled></div>
+<a href="#" id="myUniqueLinkId3" class="mainmenu" onclick="HrefCreation(3)" >Start</a>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button id="switcher1" class="switchers" onclick="GetLoginMenu()" >Login</button>
+  <button id="switcher2" class="switchers" onclick="GetSingUpMenu()">Sing Up</button>
+	<div id="login" class="container">
+    <label for="uname"><b>Username</b></label>
+    <input class="inputinsidenav" type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input class="inputinsidenav" type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input class="inputinsidenav" type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+  
+  <div id="singup" class="container">
+  <label for="uname"><b>Username</b></label>
+    <input class="inputinsidenav" type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input class="inputinsidenav" type="password" placeholder="Enter Password" name="psw" required>
+	
+	<label for="psw-repeat"><b>Repeat Password</b></label>
+    <input class="inputinsidenav" type="password" placeholder="Enter Password" name="psw-repeat" required>
+
+    <button type="submit">Sing Up</button>
+    <label>
+      <input class="inputinsidenav" type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+  <div class="podside">
+  </div>
+  
+</div>
+   
+</body>
+</html>

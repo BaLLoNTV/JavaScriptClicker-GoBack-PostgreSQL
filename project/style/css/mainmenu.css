@@ -1,0 +1,102 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.container {
+display: none;
+}
+
+.sidenav .podside {
+  height: calc(100% - 140px);
+  width: calc(100% - 250px);
+  margin: 40px 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  box-shadow: inset 0px 0px 6px 1px rgba(10,10,10,1);
+
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 60px;
+}
+
+.sidenav label {
+  white-space: nowrap;
+  padding: 8px 8px 8px 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.container input[type=text], input[type=password] {
+  width: 240px;
+  padding: 12px 20px;
+  margin: 8px 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.sidenav button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 5px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 240px;
+}
+
+.sidenav .switchers {
+  background-color: #4CAF50;
+  position: absolute;
+  color: white;
+  padding: 7px 10px;
+  margin: -32px 8px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 110px;
+}
+
+.sidenav #switcher2 {
+  margin: -32px 126px;
+}
